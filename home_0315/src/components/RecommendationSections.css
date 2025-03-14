@@ -1,0 +1,136 @@
+.recommendation-sections {
+  margin-bottom: 24px;
+}
+
+.section-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.scroll-container {
+  position: relative;
+  padding: 0 10px;
+}
+
+.scroll-content {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.collection-card,
+.website-card {
+  min-width: 200px;
+  margin-right: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s;
+  background-color: white;
+}
+
+.collection-cover,
+.website-thumbnail {
+  width: 100%;
+  overflow: hidden;
+}
+
+.collection-cover img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.website-thumbnail img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.collection-card:hover .collection-cover img,
+.website-card:hover .website-thumbnail img {
+  transform: scale(1.05);
+}
+
+.collection-info,
+.website-info {
+  padding: 12px;
+}
+
+.collection-info h4,
+.website-info h4 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection-meta,
+.website-meta {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.owner-name {
+  margin: 0 8px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stars,
+.views {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.source {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.scroll-container:hover .scroll-button {
+  opacity: 0.8;
+}
+
+.scroll-button:hover {
+  opacity: 1 !important;
+}
+
+.left-button {
+  left: 0;
+}
+
+.right-button {
+  right: 0;
+}
+
